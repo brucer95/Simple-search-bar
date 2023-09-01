@@ -17,10 +17,8 @@ document.addEventListener("keyup", (e) => {
 		});
 
 		const mensajeNoEncontrado = document.getElementById("search-not-found");
-		if (!resultadosEncontrados) {
-			mensajeNoEncontrado.style.display = "block";
-		} else {
-			mensajeNoEncontrado.style.display = "none";
-		}
+		mensajeNoEncontrado.style.display = resultadosEncontrados
+			? "none"
+			: "block";
 	}
 });
